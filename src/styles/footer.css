@@ -1,0 +1,24 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  background-color: rgb(165, 239, 239);
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  gap: 10px; /* Space between icons */
+}
+
+.social-icon-img {
+  width: 20px; /* Smaller size */
+  height: 20px; /* Smaller size */
+  transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon-img:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}
