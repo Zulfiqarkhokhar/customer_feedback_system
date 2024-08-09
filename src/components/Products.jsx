@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react";
 import "../styles/products.css";
 import Card from "./Card";
 
-function Products() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("https://fakestoreapi.com/products");
-
-      if (!res.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await res.json();
-      setProducts(data);
-      console.log(data);
-    };
-    fetchData();
-  }, []);
-
+function Products({ products }) {
   return (
     <>
       <div className="container-fluid">

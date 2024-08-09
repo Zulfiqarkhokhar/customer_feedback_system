@@ -1,4 +1,5 @@
 import "../styles/card.css";
+import { Link } from "react-router-dom";
 
 function Card({ product }) {
   const truncateText = (text, charLimit) => {
@@ -37,8 +38,8 @@ function Card({ product }) {
           <h5 className="card-title">{truncateText(product.title, 30)}</h5>
           <h6 className="card-title">{`Price: $${product.price}`}</h6>
           <p className="card-text">{truncateText(product.description, 50)}</p>
-          <a
-            href="#"
+          <Link
+            to={`/${product.id}`}
             className="btn btn-primary mt-auto"
             style={{
               backgroundColor: "rgb(165, 239, 239)",
@@ -46,10 +47,11 @@ function Card({ product }) {
               marginTop: "auto",
               border: "none",
               fontWeight: "500",
+              textDecoration: "none", // Remove underline
             }}
           >
-            Go somewhere
-          </a>
+            More Details
+          </Link>
         </div>
       </div>
     </>

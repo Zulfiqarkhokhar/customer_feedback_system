@@ -1,17 +1,22 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Products from "./components/Products";
 import Footer from "./components/Footer";
+import Home from "./Home";
+import Product from "./components/Product";
 
 function App() {
   return (
-    <>
-      <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <Products></Products>
-      <Footer></Footer>
-    </>
+    <Router>
+      <div>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home></Home>} />
+          <Route path="/:id" element={<Product></Product>} />
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </Router>
   );
 }
 
