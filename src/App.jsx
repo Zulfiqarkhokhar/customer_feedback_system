@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./Home";
 import Product from "./components/Product";
+import "font-awesome/css/font-awesome.min.css";
 
 function App() {
   return (
